@@ -1,0 +1,47 @@
+{
+  "name": "noflo-xulu-nodejs",
+  "description": "custom components",
+  "repo": "code-rider/noflo-xulu-nodejs",
+  "author": {
+    "name": "Rashid",
+    "email": "code.rider@hotmail.com"
+  },
+  "dependencies": {
+    "noflo/noflo": "*"
+  },
+  "scripts": [
+    "components/Alert.coffee",
+    "components/appendChild.coffee",
+    "components/PacketCounter.coffee",
+    "components/start.coffee",
+    "components/tweet_filter_date.coffee",
+    "components/tweet_filter_screen_name.coffee",
+    "components/tweets_filter_followers.coffee",
+    "components/tweets_filter_friends.coffee",
+    "components/tweets_get_hashTags.coffee",
+    "components/tweets_get_resultCount.coffee",
+    "components/tweets_get_screenNames.coffee",
+    "components/tweets_get_tweetText.coffee",
+    "index.js"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "icon":"twitter ",
+    "components": {
+      "Alert": "components/Alert.coffee",
+      "appendChild": "components/appendChild.coffee",
+      "PacketCounter": "components/PacketCounter.coffee",
+      "start": "components/start.coffee",
+      "tweet_filter_date": "components/tweet_filter_date.coffee",
+      "tweet_filter_screen_name": "components/tweet_filter_screen_name.coffee",
+      "tweets_filter_followers": "components/tweets_filter_followers.coffee",
+      "tweets_filter_friends": "components/tweets_filter_friends.coffee",
+      "tweets_get_hashTags": "components/tweets_get_hashTags.coffee",
+      "tweets_get_resultCount": "components/tweets_get_resultCount.coffee",
+      "tweets_get_screenNames": "components/tweets_get_screenNames.coffee",
+      "tweets_get_tweetText": "components/tweets_get_tweetText.coffee"
+    }
+  }
+}
