@@ -19,7 +19,7 @@ class tweets_get_resultCount extends noflo.Component
 
     @inPorts.in.on 'data', (@data_url) =>
       req = new XMLHttpRequest
-      req.open 'GET', "http://192.168.1.59:1337/?get_resultCount=true&data="+@data_url, true
+      req.open 'GET', "http://54.165.223.89:1337/?get_resultCount=true&data="+@data_url, true
       req.onreadystatechange = =>
         if req.readyState is 4
           if req.status is 200

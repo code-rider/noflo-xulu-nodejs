@@ -26,7 +26,7 @@ class tweet_filter_screen_name extends noflo.Component
     @inPorts.in.on 'data', (@data_url) =>
       return unless @screen_name
       req = new XMLHttpRequest
-      req.open 'GET', "http://192.168.1.59:1337/?screen_name_filter=true&data="+@data_url+"&screen_name="+@screen_name, true
+      req.open 'GET', "http://54.165.223.89:1337/?screen_name_filter=true&data="+@data_url+"&screen_name="+@screen_name, true
       req.onreadystatechange = =>
         if req.readyState is 4
           if req.status is 200

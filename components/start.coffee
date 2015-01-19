@@ -19,7 +19,7 @@ class start extends noflo.Component
 
     @inPorts.in.on 'data', (data) =>
       req = new XMLHttpRequest
-      req.open 'GET', "http://192.168.1.59:1337/?start=start", true
+      req.open 'GET', "http://54.165.223.89:1337/?start=start", true
       req.onreadystatechange = =>
         if req.readyState is 4
           if req.status is 200

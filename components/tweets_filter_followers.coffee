@@ -32,7 +32,7 @@ class tweets_filter_followers extends noflo.Component
     @inPorts.in.on 'data', (@data_url) =>
       return unless @maximum
       req = new XMLHttpRequest
-      req.open 'GET', "http://192.168.1.59:1337/?followers=true&data="+@data_url+"&maximum="+@maximum+"&minimum="+@minimum, true
+      req.open 'GET', "http://54.165.223.89:1337/?followers=true&data="+@data_url+"&maximum="+@maximum+"&minimum="+@minimum, true
       req.onreadystatechange = =>
         if req.readyState is 4
           if req.status is 200
