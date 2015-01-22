@@ -18,6 +18,7 @@ class tweets_get_screenNames extends noflo.Component
         description: 'screen names'
 
     @inPorts.in.on 'data', (@data_url) =>
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?get_screenNames=true&data="+@data_url, true
       req.onreadystatechange = =>

@@ -25,6 +25,7 @@ class tweet_filter_hashTags extends noflo.Component
     @inPorts.hash_tag.on 'data', (@hashTags) =>
     @inPorts.in.on 'data', (@data_url) =>
       return unless @hashTags
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?hash_tag_filter=true&data="+@data_url+"&hashTags="+@hashTags, true
       req.onreadystatechange = =>

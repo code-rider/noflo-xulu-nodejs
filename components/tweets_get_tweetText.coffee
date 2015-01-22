@@ -18,6 +18,7 @@ class tweets_get_tweetText extends noflo.Component
         description: 'tweet text file path'
 
     @inPorts.in.on 'data', (@data_url) =>
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?get_tweetText=true&data="+@data_url, true
       req.onreadystatechange = =>

@@ -23,6 +23,7 @@ class tweet_filter_location extends noflo.Component
     @inPorts.localtion.on 'data', (@localtion) =>
     @inPorts.in.on 'data', (@data_url) =>
       return unless @localtion
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?location_filter=true&data="+@data_url+"&localtion="+@localtion, true
       req.onreadystatechange = =>

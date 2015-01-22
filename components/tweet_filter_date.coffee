@@ -30,6 +30,7 @@ class tweet_filter_date extends noflo.Component
     @inPorts.end_date.on 'data', (@end_date) =>
     @inPorts.in.on 'data', (@data_url) =>
       return unless @start_date and @end_date
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?tweet_created_filter=true&data="+@data_url+"&start_date="+@start_date.getTime()+"&end_date="+@end_date.getTime(), true
       req.onreadystatechange = =>

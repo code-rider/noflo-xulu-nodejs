@@ -30,7 +30,8 @@ class tweets_filter_friends extends noflo.Component
     @inPorts.maximum.on 'data', (@maximum) =>
     @inPorts.minimum.on 'data', (@minimum) =>
     @inPorts.in.on 'data', (@data_url) =>
-      return unless @maximum and @data_url
+      return unless @maximum
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?friends=true&data="+@data_url+"&maximum="+@maximum+"&minimum="+@minimum, true
       req.onreadystatechange = =>

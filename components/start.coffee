@@ -18,6 +18,7 @@ class start extends noflo.Component
         description: 'empty project direcory path'
 
     @inPorts.in.on 'data', (data) =>
+      @outPorts.out.connect()
       req = new XMLHttpRequest
       req.open 'GET', "http://54.165.223.89:1337/?start=start", true
       req.onreadystatechange = =>
